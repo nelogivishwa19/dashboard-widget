@@ -1,0 +1,44 @@
+
+main {
+  min-height: 500px;
+  .mainblock {
+    border: 1px solid #e9ecef;
+    background-color: #cccccc17;
+    padding: 3rem 3rem;
+    justify-content: center;
+    }
+  }
+
+h4 {
+     border: 1px solid #37bdf1e3;
+     background-color: #37bdf1e3;
+     margin: 1rem 0;
+     border-radius: 1px;
+     padding: 10px 15px;
+     display: flex;
+     justify-content: space-between;
+   }
+
+label{
+  columns: 2;
+  font-style: inherit;
+}
+
+button{
+text-align: center;
+}
+
+#outPopUp {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  background: red;
+}
+
+.center {
+  width: 800px;
+}

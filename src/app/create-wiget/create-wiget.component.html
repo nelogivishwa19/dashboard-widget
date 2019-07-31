@@ -1,0 +1,53 @@
+<div class="container">
+    <div>
+        <h4>Widget Configuration</h4>
+    </div>
+    <div>
+        <main>
+            <div class="col-lg-12 mainblock">
+                <form [formGroup]="dashboardForm" (ngSubmit)="handleSubmit()">
+                    <div class="form-group">
+                        <label for="widgetName" class="col-sm-4 col-form-label">Widget Name</label>
+                        <input type="widgetName" name="widgetName" placeholder="Widget Name" formControlName="widgetName"/>&nbsp;
+                        <span *ngIf="submitted && dashboardForm.controls.widgetName.errors && dashboardForm.controls.widgetName.errors.required">widget
+                            name is required !</span>
+                    </div>
+                    <div class="from-group">
+                        <label class="col-sm-4 col-form-label">Seslect Visualizatin</label>
+                        <button type="button" class="btn btn-link">LineChart</button>
+                        <button type="button" class="btn btn-link">ScatterPlot</button>
+                        <button type="button" class="btn btn-link">Distributed</button>
+                    </div>
+                    <div class="from-group" style="height:200px; widows: 450px;">
+                        <canvas>
+
+                        </canvas>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="graphData" class="col-sm-4 col-form-label">Graph Data</label>
+                        <textarea name="graphData" rows="2" cols="30" formCotrolName="graphData">Enter Query</textarea>	&nbsp;
+                        <span *ngIf="submitted && dashboardForm.controls.graphData.errors && dashboardForm.controls.graphData.errors.required">Query
+                            required !</span>
+                    </div><br>
+                    <div class="center">
+                        <label class="col-sm-3"></label>
+                        <button type="button" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-plus-sign"></span> ADD A NEW QUERY
+                        </button>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="preferances" class="col-sm-4 col-form-label">Set Display Preferances</label>
+                        <ejs-daterangepicker class="col-sm-4" id='daterangepicker' placeholder='Select a range'
+                            formControlName="preferances"></ejs-daterangepicker>
+                    </div><br><br>
+                    <div class="form-group form-button">
+                        <input type="submit" class="form-submit btn btn-primary" value="submit" />
+                        <label class="col-sm-1"></label> &nbsp;
+                        <button type="button" class="btn btn-primary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+</div>
